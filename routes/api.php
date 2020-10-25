@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('get_token', [\App\Http\Controllers\API\ApiTokenController::class, 'update']);
+Route::group(['middleware' => \App\Http\Middleware\ValidateToken::class], function(){
+        Route::get('inquirer/{key}', [\App\Http\Controllers\API\InquirerController::class, 'get']);
 });
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});

@@ -10,11 +10,11 @@ class Inquirer extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['title'];
+    protected $fillable = ['title', 'key'];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
     public function answers(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany('answers', 'question_id', 'id');
+        return $this->hasMany(Answer::class, 'inquirer_id', 'id');
     }
 }

@@ -19,12 +19,17 @@ class ApiTokenRepository
      */
     public function getValid()
     {
-        return ApiToken::where(['>','ended_at', Carbon::now()])->get();
+        return ApiToken::where('ended_at','>', Carbon::now())->get();
     }
 
-    public function getValidArray()
+    public function getValidArray() : array
     {
-        return ApiToken::where(['>','ended_at', Carbon::now()])->select('api_token')->asArray()->get();
+        $tokens = ApiToken::where('ended_at','>', Carbon::now())->select('api_token')->get()->toArray();
+        return array_map(
+            function($value){
+                return $value['api_token'] ?? '';
+                }, $tokens
+        );
     }
 
     /**

@@ -7,6 +7,17 @@ use Illuminate\Http\Request;
 
 class InquirerController extends ApiController
 {
+
+    public function get($key) {
+        $inquirer = Inquirer::where(['key' => $key])->with(['answers' => function($query) {
+            $query->select('answer','inquirer_id');
+        }])->first();
+        if ($inquirer) {
+            return $inquirer;
+        } else {
+            abort(404);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
