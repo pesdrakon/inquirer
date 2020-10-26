@@ -2,13 +2,11 @@
 namespace App\Services;
 
 use App\Models\Answer;
-use Carbon\Carbon;
-use Illuminate\Support\Str;
 
 class AnswerService
 {
 
-    public function createAnswers($data, $inquirer_id)
+    public function createAnswers($data, $inquirer_id): ?int
     {
         if (is_array($data)) {
             foreach ($data as $text) {

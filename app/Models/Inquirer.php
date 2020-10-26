@@ -34,6 +34,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Inquirer withoutTrashed()
  * @mixin \Eloquent
  */
+
 class Inquirer extends Model
 {
     use HasFactory, SoftDeletes;

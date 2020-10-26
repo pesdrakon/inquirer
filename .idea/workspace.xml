@@ -20,30 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997880c0-a042-43e3-b47c-fd659132f187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/InquirerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/QuestionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/StatisticsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inquirer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inquirer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AnswerController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ApiTokenController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AnswerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AnswerRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/InquirerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/InquirerRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Answer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ApiToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Inquirer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inquirer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ApiTokenRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AnswerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AnswerService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +163,11 @@
       <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/darkaonline/l5-swagger" />
+      <path value="$PROJECT_DIR$/vendor/swagger-api/swagger-ui" />
+      <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jMyp9YcY2zYT9URwRDiYI7sKQ2" />
@@ -196,19 +186,19 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Feature" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
       <recent name="$PROJECT_DIR$/database/factories" />
       <recent name="$PROJECT_DIR$/app/Http/Middleware" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.InquirerTest.testGetInquirerFrontendTest">
@@ -268,10 +258,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603724635462" />
-    <state x="461" y="155" key="SettingsEditor" timestamp="1603628538081">
+    <state x="461" y="155" key="SettingsEditor" timestamp="1603749053039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603628538081" />
+    <state x="461" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603749053039" />
     <state x="664" y="259" width="592" height="522" key="find.popup" timestamp="1603740944095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

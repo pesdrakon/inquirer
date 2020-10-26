@@ -31,8 +31,10 @@ class InquirerController extends ApiController
      *
      * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
      */
+
     public function index()
     {
+
         return (new \App\Repositories\InquirerRepository)->getCreated();
     }
 

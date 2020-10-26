@@ -36,7 +36,8 @@ class InquirerRepository
             ->get();
     }
 
-    public function getSectorDiagramData() {
+    public function getSectorDiagramData(): array
+    {
         $inquirers = Inquirer::withCount('questions')->get();
         $with = $inquirers->where('questions_count','>', '0')->count();
         $without = $inquirers->where('questions_count', '0')->count();
