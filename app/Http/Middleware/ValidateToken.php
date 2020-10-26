@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Repositories\ApiTokenRepository;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;

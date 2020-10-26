@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Unsecured routes
-Route::get('get_token', [\App\Http\Controllers\API\ApiTokenController::class, 'update']);
 Route::get('inquirer/get/{key}', [\App\Http\Controllers\API\InquirerController::class, 'get']);
 Route::post('questions/store', [\App\Http\Controllers\API\QuestionController::class, 'store']);
 
@@ -25,6 +24,4 @@ Route::group(['middleware' => \App\Http\Middleware\ValidateToken::class], functi
     Route::apiResource('inquirer', \App\Http\Controllers\API\InquirerController::class)->only(['index','store']);
     Route::get('diagram_data', [\App\Http\Controllers\API\InquirerController::class, 'data']);
 });
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+

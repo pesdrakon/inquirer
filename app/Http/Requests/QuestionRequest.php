@@ -7,15 +7,6 @@ use Illuminate\Validation\Rule;
 
 class QuestionRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-//    public function authorize()
-//    {
-//        return false;
-//    }
 
     /**
      * Get the validation rules that apply to the request.
@@ -25,8 +16,8 @@ class QuestionRequest extends FormRequest
     public function rules()
     {
         return [
-            'questions' => ['array'],
-            'questions.*' => ['array'],
+            'questions' => ['required', 'array'],
+            'questions.*' => ['required', 'array'],
             'questions.*.question' => [
                 'required',
                 'string',

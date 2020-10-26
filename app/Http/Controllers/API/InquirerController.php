@@ -3,27 +3,26 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Requests\InquirerRequest;
-use App\Models\Answer;
 use App\Models\Inquirer;
 use App\Services\AnswerService;
-use App\Repositories\InquirerRepository;
 use Illuminate\Support\Str;
 
 class InquirerController extends ApiController
 {
 
     public function get($key) {
-        $inquirer = InquirerRepository::getForFront($key);
+        $inquirer = (new \App\Repositories\InquirerRepository)->getForFront($key);
         if ($inquirer) {
             return $inquirer;
-        } else {
-            abort(404);
         }
+
+        abort(404);
     }
 
-    public function data() {
-        $column_diagram = InquirerRepository::getColumnDiagramData();
-        $sector_diagram = InquirerRepository::getSectorDiagramData();
+    public function data(): array
+    {
+        $column_diagram = (new \App\Repositories\InquirerRepository)->getColumnDiagramData();
+        $sector_diagram = (new \App\Repositories\InquirerRepository)->getSectorDiagramData();
         return ['column_diagram_data' => $column_diagram, 'sector_diagram_data' => $sector_diagram];
     }
 
@@ -34,18 +33,9 @@ class InquirerController extends ApiController
      */
     public function index()
     {
-        return InquirerRepository::getCreated();
+        return (new \App\Repositories\InquirerRepository)->getCreated();
     }
 
-//    /**
-//     * Show the form for creating a new resource.
-//     *
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function create()
-//    {
-//        //
-//    }
 
     /**
      * Store a newly created resource in storage.
@@ -62,6 +52,6 @@ class InquirerController extends ApiController
         $inquirer->save();
         (new AnswerService)->createAnswers($data['answers'], $inquirer->id);
 
-        return InquirerRepository::getForFront($inquirer->key);
+        return (new \App\Repositories\InquirerRepository)->getForFront($inquirer->key);
     }
 }

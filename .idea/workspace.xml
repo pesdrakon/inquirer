@@ -20,13 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997880c0-a042-43e3-b47c-fd659132f187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/AnswerService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/InquirerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/QuestionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/StatisticsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inquirer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inquirer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AnswerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ApiTokenController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AnswerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AnswerRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/InquirerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/InquirerRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Answer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ApiToken.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Inquirer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inquirer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ApiTokenRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,6 +168,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jMyp9YcY2zYT9URwRDiYI7sKQ2" />
@@ -162,7 +188,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Feature" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -175,21 +201,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Feature" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
       <recent name="$PROJECT_DIR$/database/factories" />
       <recent name="$PROJECT_DIR$/app/Http/Middleware" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.InquirerTest.testGetInquirerFrontendTest">
+    <configuration name="InquirerTest.testGetInquirerFrontendTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\InquirerTest" file="$PROJECT_DIR$/tests/Feature/InquirerTest.php" method="testGetInquirerFrontendTest" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.InquirerTest.testGetInquirerFrontendTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -201,7 +236,7 @@
       <updated>1603628436033</updated>
       <workItem from="1603628437161" duration="16970000" />
       <workItem from="1603716137679" duration="6679000" />
-      <workItem from="1603725259156" duration="11445000" />
+      <workItem from="1603725259156" duration="17253000" />
     </task>
     <servers />
   </component>
@@ -237,10 +272,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603628538081" />
-    <state x="664" y="259" width="592" height="522" key="find.popup" timestamp="1603648705060">
+    <state x="664" y="259" width="592" height="522" key="find.popup" timestamp="1603740944095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="259" width="592" height="522" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603648705060" />
+    <state x="664" y="259" width="592" height="522" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603740944095" />
     <state x="624" y="237" key="run.anything.popup" timestamp="1603726270817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
