@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Requests\InquirerRequest;
+use App\Models\Answer;
 use App\Models\Inquirer;
+use App\Services\AnswerService;
 use App\Repositories\InquirerRepository;
-use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class InquirerController extends ApiController
 {
@@ -16,6 +19,12 @@ class InquirerController extends ApiController
         } else {
             abort(404);
         }
+    }
+
+    public function data() {
+        $column_diagram = InquirerRepository::getColumnDiagramData();
+        $sector_diagram = InquirerRepository::getSectorDiagramData();
+        return ['column_diagram_data' => $column_diagram, 'sector_diagram_data' => $sector_diagram];
     }
 
     /**
@@ -41,56 +50,18 @@ class InquirerController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  InquirerRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(InquirerRequest $request)
     {
-        //
-    }
+        $data = $request->validated();
+        $inquirer = new Inquirer();
+        $inquirer->title = $data['title'];
+        $inquirer->key = $data['key']??Str::random();
+        $inquirer->save();
+        (new AnswerService)->createAnswers($data['answers'], $inquirer->id);
 
-//    /**
-//     * Display the specified resource.
-//     *
-//     * @param  \App\Models\Inquirer  $inquirer
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function show(Inquirer $inquirer)
-//    {
-//        //
-//    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Inquirer  $inquirer
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Inquirer $inquirer)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Inquirer  $inquirer
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Inquirer $inquirer)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Inquirer  $inquirer
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Inquirer $inquirer)
-    {
-        //
+        return InquirerRepository::getForFront($inquirer->key);
     }
 }

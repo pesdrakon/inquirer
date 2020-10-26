@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997880c0-a042-43e3-b47c-fd659132f187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/AnswerService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Answer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/InquirerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/InquirerRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Inquirer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inquirer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +201,7 @@
       <updated>1603628436033</updated>
       <workItem from="1603628437161" duration="16970000" />
       <workItem from="1603716137679" duration="6679000" />
-      <workItem from="1603725259156" duration="4023000" />
+      <workItem from="1603725259156" duration="11445000" />
     </task>
     <servers />
   </component>
@@ -224,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="675" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603728060684" />
-    <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603643654410">
+    <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603730570515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603643654410" />
+    <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603730570515" />
     <state x="748" y="278" key="FileChooserDialogImpl" timestamp="1603724635462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

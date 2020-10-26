@@ -31,5 +31,28 @@ class InquirerRepository
         }])->get();
     }
 
+    public static function getColumnDiagramData() {
+        $data = Inquirer::select('title')
+            ->withCount('questions')
+            ->get();
+
+        return $data;
+
+    }
+
+    public static function getSectorDiagramData() {
+        $inquirers = Inquirer::withCount('questions')->get();
+        $with = $inquirers->where('questions_count','>', '0')->count();
+        $without = $inquirers->where('questions_count', '0')->count();
+        $total = $inquirers->count();
+
+        return [
+            'with_questions' => (int)$with,
+            'without_questions' => (int)$without,
+            'total' => $total
+        ];
+
+    }
+
 
 }
