@@ -15,11 +15,11 @@ class Answer extends Model
 
     public function questions(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany('questions', 'answer_id', 'id');
+        return $this->hasMany(Question::class, 'answer_id', 'id');
     }
 
     public function inquirer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo('inquirers', 'inquirer_id', 'id');
+        return $this->belongsTo(Inquirer::class, 'inquirer_id', 'id');
     }
 }

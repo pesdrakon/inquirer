@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+// Unsecured routes
 Route::get('get_token', [\App\Http\Controllers\API\ApiTokenController::class, 'update']);
-Route::get('inquirer/{key}', [\App\Http\Controllers\API\InquirerController::class, 'get']);
+Route::get('inquirer/get/{key}', [\App\Http\Controllers\API\InquirerController::class, 'get']);
 Route::post('questions/store', [\App\Http\Controllers\API\QuestionController::class, 'store']);
 
-Route::group(['middleware' => \App\Http\Middleware\ValidateToken::class], function(){
 
+// Secured routes
+Route::group(['middleware' => \App\Http\Middleware\ValidateToken::class], function(){
+    Route::apiResource('inquirer', \App\Http\Controllers\API\InquirerController::class)->only(['index','store']);
 });
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();

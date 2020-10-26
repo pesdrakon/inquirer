@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997880c0-a042-43e3-b47c-fd659132f187" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ValidateToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Answer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ApiTokenRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ApiTokenRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +161,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../alpha" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -174,13 +173,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
       <recent name="$PROJECT_DIR$/database/factories" />
       <recent name="$PROJECT_DIR$/app/Http/Middleware" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
     </key>
   </component>
@@ -200,7 +200,7 @@
       <updated>1603628436033</updated>
       <workItem from="1603628437161" duration="16970000" />
       <workItem from="1603716137679" duration="6679000" />
-      <workItem from="1603725259156" duration="2001000" />
+      <workItem from="1603725259156" duration="4023000" />
     </task>
     <servers />
   </component>
@@ -220,6 +220,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="675" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603728060684">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="675" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603728060684" />
     <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603643654410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

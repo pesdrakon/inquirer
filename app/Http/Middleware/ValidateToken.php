@@ -18,12 +18,13 @@ class ValidateToken
      */
     public function handle(Request $request, Closure $next)
     {
-        $tokens = (new ApiTokenRepository)->getValidArray()?:[];
+        $token = config('app.api_token');
         $header = $request->header('Authorization', '');
         if (Str::startsWith($header, 'Bearer ')) {
             $request_token = Str::substr($header, 7);
         }
-        if (!isset($request_token) || empty($request_token) || !in_array(hash('sha256', $request_token), $tokens, true)) {
+
+        if (!isset($request_token) || empty($request_token) || $token !== $request_token) {
             abort('401', 'Token was invalid');
         }
         return $next($request);

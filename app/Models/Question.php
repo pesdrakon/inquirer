@@ -15,6 +15,6 @@ class Question extends Model
 
     public function answer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo('answers', 'answer_id', 'id');
+        return $this->belongsTo(Answer::class, 'answer_id', 'id');
     }
 }
