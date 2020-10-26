@@ -10,7 +10,18 @@ class InquirerController extends ApiController
 
     public function get($key) {
         $inquirer = Inquirer::where(['key' => $key])->with(['answers' => function($query) {
-            $query->select('answer','inquirer_id');
+            $query->select('id','answer','inquirer_id');
+        }])->first();
+        if ($inquirer) {
+            return $inquirer;
+        } else {
+            abort(404);
+        }
+    }
+
+    public function questions($key) {
+        $inquirer = Inquirer::where(['key' => $key])->with(['answers' => function($query) {
+            $query->select('id','answer','inquirer_id');
         }])->first();
         if ($inquirer) {
             return $inquirer;

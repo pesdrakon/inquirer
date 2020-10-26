@@ -15,7 +15,6 @@ class ApiTokenController extends ApiController
      */
     public function update(Request $request): array
     {
-        $header = $request->header('Authorization', '');
-        return (new ApiTokenRepository)->refresh($header);
+        return (new ApiTokenRepository)->refresh($request);
     }
 }
