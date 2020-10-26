@@ -1,0 +1,53 @@
+version: "3"
+
+services:
+  app:
+    build: docker/php
+    volumes:
+      - ./:/app
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - internal
+
+  nginx:
+    image: nginx:1.15
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/app
+      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
+    depends_on:
+      - app
+    networks:
+      - internal
+
+  db:
+    image: mysql:8
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./docker/mysql/config.cnf:/etc/mysql/conf.d/config.cnf
+    env_file:
+      - .env
+    ports:
+      - 33066:3306
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_RANDOM_ROOT_PASSWORD:
+    networks:
+      - internal
+volumes:
+  dbdata:
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/28

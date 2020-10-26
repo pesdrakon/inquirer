@@ -20,15 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997880c0-a042-43e3-b47c-fd659132f187" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mysql/config.cnf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/vhost.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php/install-composer.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php/php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php/www.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/InquirerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Inquirer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inquirer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/InquirerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/AnswerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AnswerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +179,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Feature" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,11 +195,11 @@
       <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tests/Feature" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
       <recent name="$PROJECT_DIR$/database/factories" />
-      <recent name="$PROJECT_DIR$/app/Http/Middleware" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.InquirerTest.testGetInquirerFrontendTest">
@@ -254,10 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603730570515" />
-    <state x="748" y="278" key="FileChooserDialogImpl" timestamp="1603724635462">
+    <state x="748" y="278" key="FileChooserDialogImpl" timestamp="1603751584005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="748" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603724635462" />
+    <state x="748" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603751584005" />
     <state x="461" y="155" key="SettingsEditor" timestamp="1603749053039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
