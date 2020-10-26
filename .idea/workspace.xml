@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997880c0-a042-43e3-b47c-fd659132f187" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ApiTokenRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ApiTokenRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +162,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../alpha" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,7 +199,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603628436033</updated>
       <workItem from="1603628437161" duration="16970000" />
-      <workItem from="1603716137679" duration="4108000" />
+      <workItem from="1603716137679" duration="6679000" />
+      <workItem from="1603725259156" duration="2001000" />
     </task>
     <servers />
   </component>
@@ -216,6 +224,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="698" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603643654410" />
+    <state x="748" y="278" key="FileChooserDialogImpl" timestamp="1603724635462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="748" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603724635462" />
     <state x="461" y="155" key="SettingsEditor" timestamp="1603628538081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,6 +236,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="259" width="592" height="522" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603648705060" />
+    <state x="624" y="237" key="run.anything.popup" timestamp="1603726270817">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603726270817" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1603649141564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

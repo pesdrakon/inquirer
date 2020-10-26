@@ -43,7 +43,8 @@ class ApiTokenRepository
             $request_token = Str::substr($header, 7);
         }
 //        $random_string = Str::random(80);
-        $random_string = md5($this->getIp());
+//        $random_string = md5($this->getIp());
+        $random_string = config('app.api_token');
 
         if (isset($request_token) && !empty($request_token)) {
             $token = ApiToken::where(['api_token' => hash('sha256', $request_token)])->first();
@@ -79,7 +80,7 @@ class ApiTokenRepository
         foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){
             if (array_key_exists($key, $_SERVER) === true){
                 foreach (explode(',', $_SERVER[$key]) as $ip){
-                    $ip = trim($ip); // just to be safe
+                    $ip = trim($ip);
                     if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false){
                         return $ip;
                     }

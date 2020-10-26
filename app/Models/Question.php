@@ -10,7 +10,7 @@ class Question extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['question'];
+    protected $fillable = ['question','answer_id'];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
     public function answer(): \Illuminate\Database\Eloquent\Relations\BelongsTo

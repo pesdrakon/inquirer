@@ -12,10 +12,10 @@ class QuestionRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
-    {
-        return false;
-    }
+//    public function authorize()
+//    {
+//        return false;
+//    }
 
     /**
      * Get the validation rules that apply to the request.
@@ -24,29 +24,20 @@ class QuestionRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [
-            'question' => [
+        return [
+            'questions' => ['array'],
+            'questions.*' => ['array'],
+            'questions.*.question' => [
                 'required',
                 'string',
                 'max:2500'
             ],
-            'answer_id' => [
+            'questions.*.answer_id' => [
                 'required',
                 'integer',
                 'exists:answers,id'
             ],
         ];
-
-        switch ($this->getMethod()) {
-            case 'POST':
-            case 'PUT':
-                return $rules;
-            // case 'PATCH':
-//            case 'DELETE':
-//                return [
-//                    'id' => ['required', 'integer', 'exists:questions,id']
-//                ];
-        }
     }
 }
 
