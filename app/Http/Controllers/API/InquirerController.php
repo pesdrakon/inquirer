@@ -31,7 +31,24 @@ class InquirerController extends ApiController
      *
      * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
      */
-
+    /**
+     * @OA\Get(
+     *      path="/api/inquirers",
+     *      operationId="getInqurersList",
+     *      tags={"inquirer"},
+     *      summary="Get list of inquirers",
+     *      description="Returns list of inquirers",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/Inquirer")
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *     )
+     */
     public function index()
     {
 

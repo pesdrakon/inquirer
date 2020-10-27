@@ -34,7 +34,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Inquirer withoutTrashed()
  * @mixin \Eloquent
  */
-
+/**
+ * @OA\Schema(
+ *     title="Inquirer",
+ *     description="Inquirer model",
+ *     @OA\Xml(
+ *         name="Inquirer"
+ *     )
+ * )
+ */
 class Inquirer extends Model
 {
     use HasFactory, SoftDeletes;
