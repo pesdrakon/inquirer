@@ -23,7 +23,7 @@ class QuestionFactory extends Factory
     public function definition()
     {
         return [
-            'answer_id' => $this->faker->numberBetween(1,10),
+            'inquirer_id' => $this->faker->numberBetween(1,10),
             'question' => $this->faker->title
         ];
     }

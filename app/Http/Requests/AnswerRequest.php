@@ -16,15 +16,17 @@ class AnswerRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'answer' => [
+            'answers' => ['required', 'array'],
+            'answers.*' => ['required', 'array'],
+            'answers.*.answer' => [
                 'required',
                 'string',
-                'max:255'
+                'max:2500'
             ],
-            'inquirer_id' => [
+            'answers.*.question_id' => [
                 'required',
-                'exists:inquirers,id',
-                'integer'
+                'integer',
+                'exists:questions,id'
             ]
         ];
 

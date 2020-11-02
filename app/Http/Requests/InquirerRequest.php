@@ -23,8 +23,8 @@ class InquirerRequest extends FormRequest
                 'string',
                 'max:255'
             ],
-            'answers' => ['required', 'array'],
-            'answers.*' => [
+            'questions' => ['required', 'array'],
+            'questions.*' => [
                 'required',
                 'string',
                 'max:255'

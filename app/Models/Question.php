@@ -34,11 +34,16 @@ class Question extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['question','answer_id'];
+    protected $fillable = ['question','inquirer_id'];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
-    public function answer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function inquirer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Answer::class, 'answer_id', 'id');
+        return $this->belongsTo(Inquirer::class, 'inquirer_id', 'id');
+    }
+
+    public function answers(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Answer::class, 'question_id', 'id');
     }
 }

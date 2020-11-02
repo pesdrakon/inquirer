@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
 class QuestionRequest extends FormRequest
 {
@@ -13,21 +12,19 @@ class QuestionRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            'questions' => ['required', 'array'],
-            'questions.*' => ['required', 'array'],
-            'questions.*.question' => [
+            'answer' => [
                 'required',
                 'string',
-                'max:2500'
+                'max:255'
             ],
-            'questions.*.answer_id' => [
+            'question_id' => [
                 'required',
-                'integer',
-                'exists:answers,id'
-            ],
+                'exists:questions,id',
+                'integer'
+            ]
         ];
     }
 }

@@ -23,7 +23,7 @@ class AnswerFactory extends Factory
     public function definition()
     {
         return [
-            'inquirer_id' => $this->faker->numberBetween(1,10),
+            'question_id' => $this->faker->numberBetween(1,10),
             'answer' => $this->faker->text(255)
         ];
     }

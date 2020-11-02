@@ -17,30 +17,30 @@ class InquirerRepository
      */
     public function getForFront($key)
     {
-        return Inquirer::where(['key' => $key])->with(['answers' => function($query) {
-            $query->select('id','answer','inquirer_id');
+        return Inquirer::where(['key' => $key])->with(['questions' => function($query) {
+            $query->select('id','question','inquirer_id');
         }])->first();
     }
 
     public function getCreated()
     {
-        return Inquirer::with(['answers' => function($query) {
-            $query->select('id','answer','inquirer_id')
-                ->with('questions');
+        return Inquirer::with(['questions' => function($query) {
+            $query->select('id','question','inquirer_id')
+                ->with('answers');
         }])->get();
     }
 
     public function getColumnDiagramData() {
         return Inquirer::select('title')
-            ->withCount('questions')
+            ->withCount('answers')
             ->get();
     }
 
     public function getSectorDiagramData(): array
     {
-        $inquirers = Inquirer::withCount('questions')->get();
-        $with = $inquirers->where('questions_count','>', '0')->count();
-        $without = $inquirers->where('questions_count', '0')->count();
+        $inquirers = Inquirer::withCount('answers')->get();
+        $with = $inquirers->where('answers_count','>', '0')->count();
+        $without = $inquirers->where('answers_count', '0')->count();
         $total = $inquirers->count();
 
         return [

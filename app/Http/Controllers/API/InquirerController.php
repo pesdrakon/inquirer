@@ -3,26 +3,24 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Requests\InquirerRequest;
-use App\Models\Inquirer;
-use App\Services\AnswerService;
-use Illuminate\Support\Str;
+use App\Repositories\InquirerRepository;
+use App\Services\InquirerService;
 
 class InquirerController extends ApiController
 {
 
-    public function get($key) {
-        $inquirer = (new \App\Repositories\InquirerRepository)->getForFront($key);
+    public function get($key, InquirerRepository $repository) {
+        $inquirer = $repository->getForFront($key);
         if ($inquirer) {
             return $inquirer;
         }
-
         abort(404);
     }
 
-    public function data(): array
+    public function data(InquirerRepository $repository): array
     {
-        $column_diagram = (new \App\Repositories\InquirerRepository)->getColumnDiagramData();
-        $sector_diagram = (new \App\Repositories\InquirerRepository)->getSectorDiagramData();
+        $column_diagram = $repository->getColumnDiagramData();
+        $sector_diagram = $repository->getSectorDiagramData();
         return ['column_diagram_data' => $column_diagram, 'sector_diagram_data' => $sector_diagram];
     }
 
@@ -48,11 +46,13 @@ class InquirerController extends ApiController
      *          description="Unauthenticated",
      *      ),
      *     )
+     * @param InquirerRepository $repository
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
      */
-    public function index()
+    public function index(InquirerRepository $repository)
     {
 
-        return (new \App\Repositories\InquirerRepository)->getCreated();
+        return $repository->getCreated();
     }
 
 
@@ -62,15 +62,34 @@ class InquirerController extends ApiController
      * @param  InquirerRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(InquirerRequest $request)
+
+    /**
+     * @OA\Post (
+     *      path="/api/inquirers",
+     *      operationId="storeInquirer",
+     *      tags={"inquirer"},
+     *      summary="Create new inquirer",
+     *      description="Returns list of inquirers",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/Inquirer")
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *     )
+     * @param InquirerRequest $request
+     * @param InquirerRepository $repository
+     * @param InquirerService $service
+     * @return mixed
+     */
+    public function store(InquirerRequest $request, InquirerRepository $repository, InquirerService $service)
     {
         $data = $request->validated();
-        $inquirer = new Inquirer();
-        $inquirer->title = $data['title'];
-        $inquirer->key = $data['key']??Str::random();
-        $inquirer->save();
-        (new AnswerService)->createAnswers($data['answers'], $inquirer->id);
+        $inquirer = $service->createInquirer($data);
 
-        return (new \App\Repositories\InquirerRepository)->getForFront($inquirer->key);
+        return $repository->getForFront($inquirer->key);
     }
 }

@@ -50,13 +50,13 @@ class Inquirer extends Model
     protected $fillable = ['title', 'key'];
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
-    public function answers(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function questions(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Answer::class, 'inquirer_id', 'id');
+        return $this->hasMany(Question::class, 'inquirer_id', 'id');
     }
 
-    public function questions(): \Illuminate\Database\Eloquent\Relations\HasManyThrough
+    public function answers(): \Illuminate\Database\Eloquent\Relations\HasManyThrough
     {
-        return $this->hasManyThrough(Question::class,Answer::class, 'inquirer_id', 'answer_id');
+        return $this->hasManyThrough(Answer::class,Question::class, 'inquirer_id', 'question_id');
     }
 }

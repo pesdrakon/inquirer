@@ -23,7 +23,7 @@ class InquirerFactory extends Factory
     public function definition()
     {
         return [
-            'key' => $this->faker->word,
+            'key' => Str::random(10),
             'title' => $this->faker->name
         ];
     }
