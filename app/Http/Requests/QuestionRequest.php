@@ -15,14 +15,14 @@ class QuestionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'answer' => [
+            'question' => [
                 'required',
                 'string',
                 'max:255'
             ],
-            'question_id' => [
+            'inquirer_id' => [
                 'required',
-                'exists:questions,id',
+                'exists:inquirers,id',
                 'integer'
             ]
         ];
